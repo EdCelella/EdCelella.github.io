@@ -5,9 +5,9 @@ window.onbeforeunload = function(){
 	$('#contact').modal('hide');
 };
 
-/* Resest the data inputted into the contact form */
-function resetForm($form) {
-    $form.find('input:text, textarea').val('');
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
 }
 
 function sendEmail(){
@@ -15,39 +15,46 @@ function sendEmail(){
 	var emailForm = document.getElementById("email_form");
 	var status = document.getElementById("status");
 
+	status.classList.className = "error";
+
 	try {
 
 		var name = emailForm.elements["name"].value;
 		var email = emailForm.elements["address"].value;
 		var message = emailForm.elements["message"].value;
 
-		var body = "Sender name: " + name + "\n\nMessage:\n\n" + message;
+		if(name == "" || email == "" || message == ""){
+			status.innerHTML = "Please fill out all fields before sending.";
+		}
+		else if(!validateEmail(email)){
+			status.innerHTML = "Please enter a valid email address.";
+		}
+		else{
 
-		Email.send({
-		    SecureToken : "7061f7c5-72c3-4600-9f66-b44f8a9822db",
-		    To : 'edwardcelella@gmail.com',
-		    From : email,
-		    Subject : "Website Enquiry",
-		    Body : body
-		}).then(
-  			message => alert(message)
-		);
+			var body = "Sender name: " + name + "\n\nMessage:\n\n" + message;
+			
+			Email.send({
+			    SecureToken : "7061f7c5-72c3-4600-9f66-b44f8a9822db",
+			    To : 'edwardcelella@gmail.com',
+			    From : email,
+			    Subject : "Website Enquiry",
+			    Body : body
+			})
 
-		emailForm.elements["name"].value = "";
-		emailForm.elements["address"].value = "";
-		emailForm.elements["message"].value = "";
+			emailForm.reset();
 
-		status.classList.className = "success";
-		status.innertText = "Thank You! Your message has successfully been opened in your email client for sending.";
+			status.className = "success";
+			status.innerHTML = "Thank You! Your message has been sent.";
+
+		}
 
 	}
 	catch(e){
-
-		status.classList.className = "error";
-		status.innertText = "Oops! Something went wrong and we couldn't send your message. Please try again, or email me using your mail client at edwardcelella@gmail.com.";
+		
+		status.innerHTML = "Oops! There was a problem with your submission. Please complete the form and try again, or email me using your mail client at edwardcelella@gmail.com.";
 
 	}
 
-
+	return false;
 
 }
