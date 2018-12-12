@@ -24,7 +24,7 @@ function sendEmail(){
 		var body = "Sender name: " + name + "\n\nMessage:\n\n" + message;
 
 		Email.send({
-		    SecureToken : "7061f7c5-72c3-4600-9f66-b44f8a9822db";
+		    SecureToken : "7061f7c5-72c3-4600-9f66-b44f8a9822db",
 		    To : 'edwardcelella@gmail.com',
 		    From : email,
 		    Subject : "Website Enquiry",
