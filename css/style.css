@@ -1,0 +1,576 @@
+/* Removes padding and margin from all elements, as well as setting the font style */
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Futura', 'Roboto', sans-serif;;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/*									BACKGROUND IMAGE 									  */
+/* -------------------------------------------------------------------------------------- */
+
+
+/* Sets the background image of the main element and makes it full screen */
+main{
+
+	/* Dynamically sets main to cover entire screen width and height  */
+  	height: 100vh;
+  	width: 100vw;
+
+  	/* Sets the background image */
+  	background: url("img/background_8.jpg") fixed no-repeat;
+
+  	/* Background image does not scroll with screen, it is fixed */
+  	background-attachment: fixed;
+
+  	/* Background image covers entire element box */
+  	background-size: cover;
+
+  	/* Background image does not repeat if screen is bigger than the image */
+  	background-repeat:no-repeat;
+
+  	/* Centres background image */
+  	background-position: center center;
+
+  	/* Sets background colour to be displayed if image does not load */
+  	background-color: #464646;
+
+  	z-index: 0;
+
+}
+
+/* Sets the div element with id "blur" to dynamically fill the entire screen */
+#blur{
+
+	/* Dynamically sets width and height */
+	width: 100vw;
+	height: 100vh;
+
+  	/* Background of element mimics the background of the main element */
+  	background: inherit;
+
+  	/* Position is set relative to the main container */
+  	position: absolute;
+
+  	/* Any content which overflows the element box is hidden */
+  	overflow: hidden;
+}
+
+/* Adds a blur filter and shadow to the div element box with id "blur", inserting it before the content */
+#blur:before{
+
+	/* Dynamically sets width and height */
+	width: 100%;
+  	height: 100%;
+
+  	/* Sets content to nothing */
+	content: "";
+
+	/* Position is set relative to the main element box */
+  	position: absolute;
+
+  	/* Background of element mimics the background of the main element */
+ 	background: inherit;
+
+ 	/* Adds a shadow to the element which sits above the main elements background image and makes it darker */
+  	box-shadow: inset 0 0 0 100% rgba(255,255,255,0.2);
+
+  	/* Adds the blur filter to the element which sits above the main elements background image */
+  	filter: blur(8px);
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/*									     ANIMATION									      */
+/* -------------------------------------------------------------------------------------- */
+
+
+/* Sets text align for the navigation buttons */
+#menu{
+
+	/* Sets text to center */
+	text-align: center;
+
+	/* Fade in animation for the menu content */
+
+	animation: fadein 4s;
+	-moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari and Chrome */
+    -o-animation: fadein 4s; /* Opera */
+}
+
+/* Sets the start opacity and the end opacity for the fade in effect */
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/*									       TITLE 									      */
+/* -------------------------------------------------------------------------------------- */
+
+
+/* Adds and styles the title and bottom border line */
+#title{
+	
+	/* Sets position relative to the position of the "blur" element box */
+  	position: absolute;
+
+  	/* Sets position of element box to centre */
+  	left: 50%;
+  	top: 40%;
+  	transform: translate(-50%,-50%);
+
+	/* Sets size of the width of the element box */
+  	width: 80%;
+
+  	/* Removes outline and border */
+  	outline: 0;
+  	border: 0;
+
+  	/* Creates bottom line border and buffers it from the text and nav bar */
+  	border-bottom: 5px solid rgba(255,255,255, 1);
+  	margin: 20px 0;
+  	padding-bottom: 10px;
+
+  	/* Styles the font */
+  	font-size: 300%;
+  	font-weight: 500;
+  	color: rgba(255,255,255, 1);
+
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/*									   NAVIGATION BAR 									  */
+/* -------------------------------------------------------------------------------------- */
+
+
+#nav{
+
+	/* Sets position relative to the position of the "blur" element box */
+  	position: absolute;
+
+  	/* Sets position of element box to centre and below the title */
+  	left: 56%;
+  	top: 60%;
+  	transform: translate(-50%,-50%);
+  	
+  	/* Sets size of the width of the element box */
+  	width: 80%;
+
+  	/* Sets the font colour to white */
+	color: rgba(255,255,255, 1);
+}
+
+/* Styles element box of the entire list */
+#nav ul{
+
+	/* Removes bullet points from list */
+	list-style-type: none;
+
+	/* Any content which overflows the list is hidden */
+    overflow: hidden;
+}
+
+/* Styles each individual list element */
+#nav li{
+
+	/* Sets size of the width of the element box */
+	width: 15%;
+
+	/* Creates a gap between each list element */
+	margin-left: 5%;
+
+	/* Increases the size of each list element */
+	padding: 2%;
+	
+	/* Creates a white border around each list element */
+	border: 2px solid #FFFFFF !important;
+
+	/* Sets the font colour to white */
+	color: rgba(255,255,255, 1);
+}
+
+/* Changes the style of the list elements when the mouse hovers */
+#nav li:hover{
+
+	/* Sets the background colour of the list element to white */
+	background-color: rgba(255,255,255, 1);
+
+	/* Sets the font colour to black */
+	color: rgba(0,0,0, 1);
+}
+
+/* Styles all hyperlink tags */
+a{
+
+	/* Removes hyperlink underline */
+	text-decoration: none !important;
+}
+
+/* Styles accessed hyperlink */
+#nav a:visited{
+
+	/* Sets list border back to white */
+  	border: 2px solid #FFFFFF !important;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/*									       MODALS 									      */
+/* -------------------------------------------------------------------------------------- */
+
+/* Centers the modal content in the center of the screen */
+.modal-dialog{
+
+	/* Sets the box used for the element */
+	display: inline-block;
+
+	/* Aligns the modal dialog to the middle of the screen */
+	vertical-align: center;
+}
+
+/* Removes round edges from modals */
+.modal-content{
+
+	/* Reducues border radius of modal to 0 creating sharp edges */
+    border-radius: 0px !important; 
+    -moz-border-radius: 0px !important; /* Firefox */
+    -webkit-border-radius: 0px !important; /* Safari and Chrome */
+    -o-border-radius: 0px !important; /* Opera */
+
+    text-align: left;
+}
+
+/* Removes rounded edges from modal buttons */
+.modal-footer button{
+
+	/* Sets the radius of the button perimeter */
+	border-radius: 0 !important;
+}
+
+/* Styles the modal images to make them circles */
+.modal-content img{
+
+	/* Sets the size of the image */
+	width: 120px;
+	height: 120px;
+
+	/* Makes the border of the image a circle */
+	border-radius: 100%;
+
+	/* Adds a black border to the image */
+	border: 2px solid #000000;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/*									       ABOUT 									      */
+/* -------------------------------------------------------------------------------------- */
+
+
+/* Centers the modal image */
+#about .modal-content img{
+
+	/* Defines the element box type */
+	display: block;
+
+	/* Removes margin and automatically centers the element box */
+	margin: 0 auto;
+}
+
+/* Justifies all text in modal */
+#about .modal-content p{
+
+	/* Justifies all text in modal */
+	text-align: justify;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/*									      PROJECTS 									      */
+/* -------------------------------------------------------------------------------------- */
+
+/* Defines the size of each seperate project element */
+#projects .modal-content #proj{
+
+	/* Defines the size of the element */
+	width: 100%;
+  	height: 30%;
+
+  	/* Displays no overflow */
+  	overflow: hidden;
+}
+
+/* Draws a line underneath each project element */
+#projects .modal-content .line{
+
+	/* Draws the line */
+	border-bottom: 1px solid rgba(229,229,229, 1);
+
+	/* Creates buffer between this project elements content and the line */
+  	margin: 20px 0;
+
+  	/* Creates a buffer between the next project elements content and the line */
+  	padding-bottom: 10px;
+}
+
+/* Sets the size of the logo for each project and centers*/
+#projects .modal-content #logo{
+
+	/* Sets the size of the image element */
+	width: 15%;
+	height: 100%;
+
+	/* Defines the element box type */
+	display: block;
+
+	/* Removes margin and automatically centers the element box */
+	margin: 0 auto;	
+
+	/* Creates buffer between logo and text */
+	padding-bottom: 5px;
+}
+
+/* Sets the size of the text for each project */
+#projects .modal-content #desc{
+
+	/* Sets the size of the text element */
+	width: 75%;
+	height: 30%;
+
+	/* Defines the element box type */
+	display: block;
+
+	/* Removes margin and automatically centers the element box */
+	margin: 0 auto;	
+
+	/* Justifies all text in modal */
+	text-align: justify;
+}
+
+
+
+/* -------------------------------------------------------------------------------------- */
+/*									     CONTACT 									      */
+/* -------------------------------------------------------------------------------------- */
+
+
+/* Sets the size of the input boxes and creates padding around cursor */
+#contact input{
+
+	/* Sets the element box width */
+	width: 100%;
+
+	/* Creates buffer between edge of input box and cursor when inputting data */
+	padding: 12px 20px;
+}
+
+/* Sets the size of the text area boxes and creates padding around cursor */
+#contact textarea{
+
+	/* Sets the element box size */
+	width: 100%;
+	height: 150px;
+
+	/* Creates buffer between edge of input box and cursor when inputting data */
+	padding: 12px 20px;
+
+	/* Prevents user from resizing element box */
+	resize: none;
+}
+
+/* Removes rounded edges from button and sets width */
+#contact #form_submit{
+
+	/* Removes rounded edges from button */
+	border-radius: 0 !important;
+
+	/* Sets width of element box */
+	width: 100%;
+}
+
+/* Sets the font colour to red */
+.error{
+
+	/* Sets the font colour to red */
+	color: #ff6961;
+}
+
+/* Sets the font colour to green */
+.success{
+
+	/* Sets the font colour to green */
+	color: #77dd77;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/*									  MEDIA QUERIES 									  */
+/* -------------------------------------------------------------------------------------- */
+
+
+/* When the browser window width is above 700px the navigation list changes to horizontal */
+@media screen and (min-width: 700px){
+	#nav li{
+
+		/* Sets list elements to horizontal */
+		float: left;
+	}
+}
+
+/* When the browser window is below 700px the style of the menu changes */
+@media screen and (max-width: 700px){
+
+	/* Moves the title further up the screen */
+	#title{
+
+		/* Sets the position of the title */
+		top: 30%;
+	}
+
+	/* Centers entire list */
+	#nav{
+
+	  	/* Centers list for vertical alignment */
+	  	left: 75%;
+	  	top: 65%;	  	
+	}
+
+	/* Changes size of list element and space between each one for vertical alignment */
+	#nav li{
+		
+		/* Adds larger gap above each element */
+		margin-top: 8%;
+
+		/* Sets size of the width of the element box */
+		width: 30%;
+	}
+
+	.modal-dialog{
+
+		/* Aligns the modal dialog to the middle of the screen */
+		vertical-align: top;
+	}
+}
+
+/* Changes position of list if height of browser window is less than 600px */
+@media screen and (max-height: 600px){
+
+	#nav{
+
+		/* Sets the position of the navigation bar */
+		top: 75%;
+	}
+}
+
+/* Changes the position and style of the list if height of browser window is less than 420px */
+@media screen and (max-height: 420px){
+
+	/* Centers the list */
+	#nav{
+
+	  	/* Centers list */	
+	  	top: 65%;
+	  	left:55%;	  	
+	}
+
+	/* Sets list to horizontal and creats buffer between each element */
+	#nav li{
+
+		/* Sets list elements to horizontal */
+		float: left;
+
+		/* Adds gap between each list element */
+		margin-left: 1%;
+
+		/* Sets the width of the list element */
+		width: 20%;
+	}
+}
+
+/* Changes the size of the list elements if height of browser window is less than 320px */
+@media screen and (max-height: 320px){
+
+	/* Adjusts list element size */
+	#nav li{
+
+		/* Sets width list element size */
+		width: 20%;
+	}
+}
+
+/* Changes the layout of the project modal if width of browser is more that 1000px */
+@media screen and (min-width: 1000px){
+
+	/* Aligns the image to the left */
+	#projects .modal-content .left #logo{
+
+		/* Aligns image element to the left */
+		float: left;
+
+		/* Adds buffer between image and text */
+		margin-left: 5%;
+	}
+
+	/* Aligns the text to the right */
+	#projects .modal-content .left #desc{
+
+		/* Aligns text element to the right */
+		float: right;
+	}
+
+	/* Aligns the image to the right */
+	#projects .modal-content .right #logo{
+
+		/* Aligns image element to the right */
+		float: right;
+
+		/* Adds buffer between image and text */
+		margin-right: 5%;
+	}
+
+	/* Aligns the text to the left */
+	#projects .modal-content .right #desc{
+
+		/* Aligns text element to the left */
+		float: left;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	#contact .modal-dialog{
+		width: 90%;
+	}
+}
