@@ -41,7 +41,10 @@ function sendEmail(){
 			    From : email,
 			    Subject : "Website Enquiry",
 			    Body : body
-			})
+			}).then(
+			  message => alert("mail has been sent sucessfully")
+			  // status.className = "success";
+			);
 
 			emailForm.reset();
 
