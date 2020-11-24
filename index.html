@@ -37,8 +37,8 @@
 
 	</head>
 
-	<body>
-		<main>
+	<body class="noScroll">
+		<main class="noScroll">
 			<div id="blur">
 				<div id="menu">
 
@@ -51,7 +51,7 @@
 					<div id="nav">
 						<ul>
 							<a data-toggle="modal" data-target="#about"> <li> ABOUT </li> </a>
-							<a href="docs/Edward_Celella_CV.pdf" download="Edward Celella CV.pdf" data-target="#CV"> <li> CV </li> </a>
+							<a href="docs/Curriculum Vitae_Edward_Celella.pdf" download="Curriculum Vitae_Edward_Celella.pdf" data-target="#CV"> <li> CV </li> </a>
 							<a data-toggle="modal" data-target="#projects"> <li> PROJECTS </li> </a>
 							<a data-toggle="modal" data-target="#contact"> <li> CONTACT </li> </a>
 						</ul>
@@ -69,21 +69,35 @@
 
       						<div class="modal-body">
       							<br>
-      							<img src="css/img/headshot_3.png">
+      							<img src="css/img/headshots/headshot_3.png">
       							<br>
-        							<p>Hi and welcome to my website. Here you will find a catalogue of some of the projects I have created whilst at university and during my personal time. This particular page will hopefully EDucate you about me and some of the interests I hold.</p>
-        							<br>
-        							<p>I'm currently finishing my second year of my computer science degree, studying at Nottingham Trent University. During my time I have developed my programming; mathematical; and problem-solving skills. Currently I have taken a variety of modules which include topics from databases and networking to graphics and applied mathematics.  Next year I will be continuing my studies further in modules such as Artificial Intelligence and Cloud Computing.</p>
-        							<br>
-        							<p>My primary programming languages are C++ and Java. Having used them primarily throughout my degree. However, I am also proficient in Python; SQL; HTML; CSS; JavaScript and PHP. Many examples of my work in these languages can be found on the projects page. I also implement a variety of tools during my projects/work to ensure my work is of the highest quality. These include version control software (GIT and Mercurial) as well as continuous integration servers (Jenkins) coupled with testing libraries (Boost UTF).</p>
-        							<br>
-        							<p>During my free time I work on personal projects, as well as attending hackathon events such as Hack 24. Currently I also work on my final year project. My project involves looking at the relationship between news stories and the stock prices of companies. The end goal is to hopefully build a system which can track news stories of a company, then by using a natural language processor, determine what the story is about and how positive or negative the story is. These results will then be fed into a neural network which will try to predict the effect it will have on the stock price.</p>
-        							<br>
-        							<p>Finance and economics are topics I am deeply interested in and are fields I wish to enter once I conclude my studies. However, I also have an enthusiasm for security and nearly all fields of artificial intelligence.</p>
-        							<br>
-        							<p>When I’m not programming my favourite past time is listening to music. This is either at home, or attending music festivals/live gigs. Music is something I have a deep passion for and many of my projects revolve around using music.</p>
-        							<br>
-        							<p>Thanks for taking the time to check out my website. Feel free to get in touch using the contact us page and hope you have a lovely day wherever you are.</p>
+
+        							<p>Over the past four years, I have undertaken two degrees in the field of Computer Science. Now, as a recent graduate, I am looking to apply the skills and knowledge I have gained to the world of industry.</p></br>
+
+                      <p>During this past year, during my master's, I have heavily specialised in data science and machine learning. This includes studying topics such as neural computation, nature-inspired algorithms, and the underlying mathematics behind many AI model. I am specifically interested in applying these skills to the world of finance and economics, which is another great passion of mine.<p></br>
+
+                      <p>However, although I have specialised in machine learning, there are many other disciplines of Computer Science I am keenly interested in such as: functional programming, software development, security, and algorithm design.</p></br>
+
+                      <p>This website purpose is to act as a record of the projects I have completed, in order to showcase my understanding. This will hopefully allow you to gain some insight into my current skill level/knowledge. If you have any questions, or simply want to say hello, feel free to send me a message using the contact page.</p></br>
+
+                      <p>Thank you for taking the time to visit my website, and I hope to hear from you soon!</p></br>
+
+                      <h3>Hobbies/Interests</h3>
+                      
+                      <p><i>Music</i></p>
+                      <p>Throughout the year you can usually find me attending different gigs, and during the summer spending my holidays at music festivals. I am an avid listener of a range of musical genres and spend most of my time during the day listening to music. Unfortunately for me, this love has morphed into the expensive hobby of vinyl collecting.</p></br>
+
+                      <p><i>Climbing/Bouldering</i></p>
+                      <p>Most weekends I travel with my mates to go bouldering/rock climbing. Our main outdoor venue is the Peak District, where (weather permitting) we spend a day (attempting to) climb challenging rock faces. During the week I frequent indoor climbing centres, as a way to relax and exercise.</p></br>
+
+                      <p><i>Reading</i></p>
+                      <p>A favourite past time of mine is reading. My main genre is non-fiction, specifically history or science-related books. My current favourite books are "Chance" by New Scientist, and "The Origin of Species" by Charles Darwin (the latter admittedly was a hard read).</p></br>
+
+                      <p><i>Chess</i></p> 
+                      <p>I have recently become interested in the game of chess. Although I currently am only a beginner, I have enjoyed learning the different strategies and techniques used by high ranked players. The theory of the game is also very interesting to learn. I usually play chess 3/4 times a week online, and when possible with my friends.</p></br>
+                      
+
+
       						</div>
       						
       						<div class="modal-footer">
@@ -104,43 +118,108 @@
           							<h1 class="modal-title">PROJECTS</h1>
         						</div>
         						<div class="modal-body">
+
+                      <div id="proj" class="left line">
+                        <p><i> All project repositories can be accessed by clicking the project icon, or by visiting https://github.com/EdCelella.</i></p>
+                      </div>
+
         							<div id="proj" class="left line">
         								<div id="logo">
-        									<a href="https://github.com/EdCelella/Personal_Website"><img src="css/img/website_logo.png"></a>
+        									<a href=""><img src="css/img/icons/Deep_Learning.png"></a>
         								</div>
         								<div id="desc">
-        									<h4> Website </h4>
-          									<p>I built this web page in order to demonstrate my knowledge of website development. The front end was build using HTML and CSS. The majority of the project was built using the standard versions, however CSS3 was used for the load animation and Bootstrap for the models. The backend was built using JavaScript and PHP, in order to send emails and display notifications to the user. Click on the image adjacent to be taken to the GIT repository of the project.</p>
+        									<h4> Time Series Forecasting Using Transformers </h4>
+          									<p>Over the summer of 2020, I was required to undertake a research project for my master's degree. This project focused on the application of attention mechanisms, which are widely used in the field of natural language processing, to time-series analysis. Specifically, for this project, I implemented and altered the architecture of Transformer networks for the application of stock price forecasting. The project was implemented in Python, utilising libraries such as Pytorch, Pandas, Numpy etc.</p>
           								</div>
         							</div>
 
         							<div id="proj" class="right line">
-        								<div id="logo">
-        									<a href="https://github.com/EdCelella/Hitify"><img src="css/img/hitify_logo.png"></a>
-        								</div>
+                        <div id="logo">
+                            <a href=""><img src="css/img/icons/Genetic_Algorithm.png"></a>
+                          </div>
         								<div id="desc">
-        									<h4> Hitify </h4>
-          									<p>Hitify is a social networking application, built for sharing and uploading music. The entire application was built using java and comes in three parts. Firstly, there is the client which is used to log in and display a user’s news feed; music; friends and messages. Secondly is the music server which receives requests from the client and interacts with the database. Third and finally is the music server which keeps track of chat history between users, and displays new messages when a user logs on. All servers are multithreaded, and the GUI is built using Swing. Click on the image adjacent to be taken to the GIT repository of the project.</p>
+        									<h4> Genetic Programming for Time Series Forecasting </h4>
+          									<p>This project applies a tree-based genetic programming system to the task of stock market forecasting. The goal of this project, undertaken over a 2 week period for my master's degree, was to prove the capabilities of genetic programming when applied to a complex task. The entire algorithm was built in base python3.</p>
           								</div>
         							</div>
 
-        							<div id="proj" class="left line">
-        								<div id="logo">
-        									<a href="https://github.com/EdwinLangley/SDIPROJECT"><img src="css/img/trekstar_logo.png"></a>
-        								</div>
-        								<div id="desc">
-        									<h4> Trek Star </h4>
-          									<p>Trek Star is a program built for a university project. Its purpose is to keep track information about film projects. The entire project was built using C++, using QT as the front end. The back end of the systems uses an object orientated approach, creating an object for each project. These objects are stored in a linked list for access. Click on the image adjacent to be taken to the GIT repository of the project.</p>
-          								</div>
-        							</div>
+                      <div id="proj" class="left line">
+                        <div id="logo">
+                          <a href="docs/Algorithmic_Application_to_Stock_Trading_Methods.pdf" download="Algorithmic_Application_to_Stock_Trading_Methods.pdf"><img src="css/img/icons/Stock_Chart.png"></a>
+                        </div>
+                        <div id="desc">
+                          <h4> A Review of Algorithmic Applications to Stock Trading Methods </h4>
+                            <p>As one of the stronger student on my master's course, I was given the opportunity to undertake a research project in my second term. This paper, which explores the economic theories of stock trading, and the current machine learning algorithms/models applied to the task, is the result of that work. The report itself achieved me the highest grade out of all students who undertook the module, showing "evidence of a considerable amount of original thinking" and a "deep and thorough critical review of the literature covered".</p>
+                          </div>
+                      </div>
+
+                      <div id="proj" class="right line">
+                        <div id="logo">
+                          <a href=""><img src="css/img/icons/MRI.png"></a>
+                        </div>
+                        <div id="desc">
+                          <h4> Enhancing MRI Images Using Deep Learning </h4>
+                            <p>For clear MRI images to be taken of a patient, a long acquisition time is required. Thus, many researchers have attempted to apply deep learning to the task of reconstructing fully sample k space MRI images from sub-samples of the k space. This project is my implementation of the U-Net model, applied to this task using the fastMRI dataset, as well as a standard CNN as a point of comparison. The project was built using Python and Pytorch.</p>
+                          </div>
+                      </div>
+
+                      <div id="proj" class="left line">
+                        <div id="logo">
+                          <a href=""><img src="css/img/icons/TSP.png"></a>
+                        </div>
+                        <div id="desc">
+                          <h4> Nature-Inspired Solutions to the Travelling Salesman Problem </h4>
+                            <p>The travelling salesman problem is one of the most well-known computing challenges. This project is my implementation of three algorithms which solve said problem. Namely, these are simulated annealing, tabu search, and an evolutionary algorithm. All algorithms were built using base Python, with all managing to find routes for the given dataset under a distance of 12000 (averaged over 30 trials).</p>
+                          </div>
+                      </div>
+
+                      <div id="proj" class="right line">
+                        <div id="logo">
+                          <a href=""><img src="css/img/icons/Timetable.png"></a>
+                        </div>
+                        <div id="desc">
+                          <h4> Intelligent Time Table System </h4>
+                            <p>During my final year of my bachelor's degree, I worked in a team of three to produce an intelligent timetabling system for the University. The project was built using the MVC architecture, and provided both a web-page and application interface for user interaction. My role within the team was to produce the algorithm to timetable lectures and labs without any collisions, whilst providing each booking with the correct resources required, this was accomplished through an evolutionary algorithm. I also played a key role in developing the front end of the system. The system was built using C#, as well as web development languages. </p>
+                          </div>
+                      </div>
+
+                      <div id="proj" class="left line">
+                        <span id="logo">
+                          <a href=""><img src="css/img/icons/Newspaper.png"></a>
+                        </span>
+                        <div id="desc">
+                          <h4> Stock Market Prediction Using Newspaper Sentiment </h4>
+                            <p>For my bachelor's dissertation, I developed a system which used the sentiment of newspaper articles about a company to forecast its future stock price. The project retrieved newspaper articles of a company from the internet and used the Stanford NLP library to calculate sentiment. A Naive Bayes classifier was then used to extract the topic from the news article. These metrics, along with the daily stock price data, were fed into an LSTM network which produced a forecast future price movements. <i> (Unfortunatly, due to updates of utilised of APIs, the project no longer runs. The project repository has therefore been taken down for maintanence.)</i> </p>
+                        </div>
+                      </div>
+
+                      <div id="proj" class="right line">
+                        <div id="logo">
+                          <a href=""><img src="css/img/icons/Music.png"></a>
+                        </div>
+                        <div id="desc">
+                          <h4> Music Streaming Social Media Application </h4>
+                            <p>For one of my second-year projects at University, I was tasked with working with a partner to build a social networking application, for sharing and uploading music. The entire application was built using Java and comes in three parts. Firstly, there is the client which is used to log in and display a user’s news feed; music; friends and messages (The UI for the user). Secondly is the music server, which receives requests from the client and interacts with the database. The last component is the chat server, which keeps track of chat history between users, and displays new messages when a user logs on. All servers are multithreaded, and the GUI is built using Swing.</p>
+                          </div>
+                      </div>
+
+                      <div id="proj" class="left line">
+                        <div id="logo">
+                          <a href=""><img src="css/img/icons/Binary_Tree.png"></a>
+                        </div>
+                        <div id="desc">
+                          <h4> AVL Binary Search Tree </h4>
+                            <p>To gain a deeper understanding of how binary search trees self-balance, I implemented an AVL binary search tree in C++. The resulting class uses templates to allow for any key-value data type pair, and contains implementation for insert, search, and remove commands (whilst keeping the tree balanced).</p>
+                          </div>
+                      </div>
 
                       <div id="proj" class="right">
                         <div id="logo">
-                          <a href="https://github.com/EdCelella/Python-Chess"><img src="css/img/chess_logo.png"></a>
+                          <a href="https://github.com/EdCelella/Personal_Website"><img src="css/img/icons/Web_Development.png"></a>
                         </div>
                         <div id="desc">
-                          <h4> Chess </h4>
-                            <p>For my first-year project I had to produce a programme using python. I decided to produce a chess game which can be played against two people. The program uses data dictionaries in order to track the positions of all the pieces, and also another to store the legal moves for each piece. The front end was built using Pygame. Click on the image adjacent to be taken to the GIT repository of the project.</p>
+                          <h4> Website </h4>
+                            <p>I built this web page in order to demonstrate my knowledge of website development. The entire website is built using base HTML, CSS3 and JavaScript, apart from the models which use Bootstrap. The backend was built using JavaScript and PHP, in order to send emails and display notifications to the user. For emails to be sent whilst hosted on Github pages, the PHP was replaced with SmtpJs.</p>
                           </div>
                       </div>
 
@@ -148,6 +227,7 @@
 
         						<div class="modal-footer">
           							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <p><i>(All icons retrieved from <a href="https://thenounproject.com">the noun project</a> and used under the creative commons license.)</i></p>
         						</div>
       						</div>
 

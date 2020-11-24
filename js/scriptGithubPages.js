@@ -5,11 +5,13 @@ window.onbeforeunload = function(){
 	$('#contact').modal('hide');
 };
 
+/* Validate email */
 function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
 
+/* Send email */
 function sendEmail(){
 
 	var emailForm = document.getElementById("email_form");
@@ -34,7 +36,7 @@ function sendEmail(){
 			var body = "Sender name: " + name + "\n\nMessage:\n\n" + message;
 			
 			Email.send({
-			    SecureToken : "7061f7c5-72c3-4600-9f66-b44f8a9822db",
+			    SecureToken : "91feb68c-8e47-4bfd-8ffc-c3d205235ab7",
 			    To : 'edwardcelella@gmail.com',
 			    From : email,
 			    Subject : "Website Enquiry",
