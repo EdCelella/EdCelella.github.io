@@ -2,7 +2,7 @@
 *{
 	padding: 0px;
 	margin: 0px;
-	font-family: 'Futura', 'Roboto', sans-serif;;
+	font-family: Georgia, serif;
 }
 
 
@@ -93,19 +93,21 @@ main{
 /*									     ANIMATION									      */
 /* -------------------------------------------------------------------------------------- */
 
-
 /* Sets text align for the navigation buttons */
 #menu{
 
 	/* Sets text to center */
 	text-align: center;
+}
 
-	/* Fade in animation for the menu content */
+/* Animation for page title */
+#title{
 
-	animation: fadein 4s;
-	-moz-animation: fadein 4s; /* Firefox */
-    -webkit-animation: fadein 4s; /* Safari and Chrome */
-    -o-animation: fadein 4s; /* Opera */
+	/* Fade in animation for the title content */
+	animation: fadein 3s;
+	-moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
 }
 
 /* Sets the start opacity and the end opacity for the fade in effect */
@@ -142,6 +144,99 @@ main{
     }
 }
 
+/* Navbar button load and transition aimation */
+.popout li{
+
+	/* Hover transition animation */
+	transition: transform .2s; 
+
+	/* Page load pop in animation */
+	animation: popout 3s ease-out;
+	-webkit-animation:popout 3s ease-out; /* Firefox */
+	-moz-animation:popout 3s ease-out; /* Safari and Chrome */
+	-o-animation:popout 3s ease-out; /* Opera */
+}
+
+/* Scales up navbar element/button on hover */
+.popout li:hover {
+  transform: scale(1.2);
+}
+
+
+/* Sets the scale to 0, increases to 1.2, and then back down to 1 - created pop in animation */
+@keyframes popout {
+	0%{
+		transform: scale(0,0);
+	}
+    75% {
+        transform: scale(0,0);
+    }
+    93.75%{
+    	transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+@-moz-keyframes popout { 
+    0%{
+		transform: scale(0,0);
+	}
+    75% {
+        transform: scale(0,0);
+    }
+    93.75%{
+    	transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+@-webkit-keyframes popout { 
+    0%{
+		transform: scale(0,0);
+	}
+    75% {
+        transform: scale(0,0);
+    }
+    93.75%{
+    	transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+@-o-keyframes popout { 
+    0%{
+		transform: scale(0,0);
+	}
+    75% {
+        transform: scale(0,0);
+    }
+    93.75%{
+    	transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+/* Hover animation duration for project icons */
+#projects img{
+
+	/* Sets animation transition time */
+	transition: transform .2s;
+}
+
+/* Shrink project icons on hover */
+#projects img:hover{
+
+	/* Reduces scale of image */
+	transform: scale(0.8);
+}
 
 /* -------------------------------------------------------------------------------------- */
 /*									       TITLE 									      */
@@ -207,8 +302,8 @@ main{
 	/* Removes bullet points from list */
 	list-style-type: none;
 
-	/* Any content which overflows the list is hidden */
-    overflow: hidden;
+	/* Any content which overflows the list is visible */
+    overflow: visible;
 }
 
 /* Styles each individual list element */

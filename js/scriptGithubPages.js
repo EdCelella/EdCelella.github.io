@@ -36,20 +36,21 @@ function sendEmail(){
 			var body = "Sender name: " + name + "\n\nMessage:\n\n" + message;
 			
 			Email.send({
-			    SecureToken : "91feb68c-8e47-4bfd-8ffc-c3d205235ab7",
+			    SecureToken : "04c16ec7-2bdb-44b3-a0bf-7eb555ea655c",
 			    To : 'edwardcelella@gmail.com',
 			    From : email,
 			    Subject : "Website Enquiry",
 			    Body : body
-			}).then(
-			  message => alert("mail has been sent sucessfully")
-			  // status.className = "success";
-			);
-
-			emailForm.reset();
-
-			status.className = "success";
-			status.innerHTML = "Thank You! Your message has been sent.";
+			}).then(function(result){
+				if(result == "OK"){
+					emailForm.reset();
+					status.className = "success";
+					status.innerHTML = "Thank You! Your message has been sent.";
+				}else{
+					status.innerHTML = "Oops! There was a problem with your submission. Please complete the form and try again, or email me using your mail client at edwardcelella@gmail.com.";
+				}
+			});
+			
 
 		}
 
