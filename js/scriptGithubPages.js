@@ -5,6 +5,12 @@ window.onbeforeunload = function(){
 	$('#contact').modal('hide');
 };
 
+/* Resizes window when safari tabs close */
+$(window).on('resize', function(){
+	console.log("works");
+    $('body').css('min-height', $(window).height());
+});
+
 /* Validate email */
 function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
