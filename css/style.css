@@ -457,7 +457,7 @@ a{
 
 
 /* Draws a line underneath each project element */
-#projects .modal-content .line{
+.modal-content .line{
 
 	/* Draws the line */
 	border-bottom: 1px solid rgba(229,229,229, 1);
