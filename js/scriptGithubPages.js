@@ -38,12 +38,12 @@ function sendEmail(){
 		}
 		else{
 
-			var body = "Sender name: " + name + "\n\nMessage:\n\n" + message;
+			var body = "Sender email: " + email + "\r\nSender name: " + name + "\r\n\r\nMessage:\r\n\r\n" + message;
 			
 			Email.send({
 			    SecureToken : "04c16ec7-2bdb-44b3-a0bf-7eb555ea655c",
 			    To : 'edwardcelella@gmail.com',
-			    From : email,
+			    From : 'edwardcelella@gmail.com',
 			    Subject : "Website Enquiry",
 			    Body : body
 			}).then(function(result){
@@ -53,7 +53,6 @@ function sendEmail(){
 					status.innerHTML = "Thank You! Your message has been sent.";
 				}else{
 					status.innerHTML = "Oops! There was a problem with your submission. Please complete the form and try again, or email me using your mail client at edwardcelella@gmail.com.";
-					console.log(result);
 				}
 			});
 			
