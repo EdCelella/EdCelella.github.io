@@ -7,7 +7,6 @@ window.onbeforeunload = function(){
 
 /* Resizes window when safari tabs close */
 $(window).on('resize', function(){
-	console.log("works");
     $('body').css('min-height', $(window).height());
 });
 
@@ -54,6 +53,7 @@ function sendEmail(){
 					status.innerHTML = "Thank You! Your message has been sent.";
 				}else{
 					status.innerHTML = "Oops! There was a problem with your submission. Please complete the form and try again, or email me using your mail client at edwardcelella@gmail.com.";
+					console.log(result);
 				}
 			});
 			
