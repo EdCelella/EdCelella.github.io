@@ -1,6 +1,6 @@
 # Personal Website
 
-This repository contains the code for my Github page. As Github Pages is a static site hosting service, only HTML5, CSS3 and JavaScript are utilised. The project does contain PHP code for sending emails, which can be used if a dynamic hosting service is utilised. Test.
+This repository contains the code for my Github page. As Github Pages is a static site hosting service, only HTML5, CSS3 and JavaScript are utilised. The project does contain PHP code for sending emails, which can be used if a dynamic hosting service is utilised.
 
 The website can be viewed [here](https://edcelella.github.io/).
 
