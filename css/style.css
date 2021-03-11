@@ -265,10 +265,14 @@ main{
   	border-bottom: 5px solid rgba(255,255,255, 1);
   	margin: 20px 0;
   	padding-bottom: 10px;
+  	
+}
 
-  	/* Styles the font */
-  	font-size: 300%;
-  	font-weight: 500;
+#title > h1 {
+
+	/* Styles the font */
+	font-size: 300% !important;
+  	font-weight: 500 !important;
   	color: rgba(255,255,255, 1);
 
 }
